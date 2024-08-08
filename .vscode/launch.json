@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "rknn-track build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/rknn_yolov5deepsort_demo",
+            "args": ["model/RK3588/yolov5s_relu.rknn","model/RK3588/deepsort.rknn", "data/source/airplane-13.mp4"],    //可以添加命令行参数
+            // "program": "/usr/bin/valgrind",  // 指向Valgrind执行文件
+            // "args": [
+            //     "--leak-check=full",
+            //     "--track-origins=yes",
+            //     "${workspaceFolder}/build/trackerapp_demo"  // 指定您的程序作为Valgrind的参数
+            // ],
+            
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            // "externalConsole": true,  // 使用外部控制台以便查看Valgrind的输出
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "make build activefile",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "logging": {
+                "trace": true,
+                "traceResponse": true,
+                "engineLogging": true
+            }
+        }
+    ]
+}

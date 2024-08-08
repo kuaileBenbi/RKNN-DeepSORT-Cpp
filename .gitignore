@@ -1,0 +1,13 @@
+model/RK3588/*
+data/*
+build/*
+
+# .开头的任何文件
+.*
+!.vscode
+data
+build
+# 排除 .gitignore 本身
+!/.gitignore
+!/.gitkeep
+*.jpg
