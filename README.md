@@ -12,9 +12,9 @@ make -j8
 ```
 
 ## python版本使用说明
-python版本的rknn-deepsort好像资料比较少，也没有找到太多依据（借鉴），自己按照pytorch版本改的
+python版本的rknn-deepsort好像资料比较少，也没有找到太多依据（借鉴），自己按照pytorch版本改的.(具体参数设置参考main.py的args说明)
 ```python main.py```
-其他参数，参考main.py的args说明
+
 
 ## 程序简介
 * step-1: 使用线程池来实现yolov5的NPU多线程推理
