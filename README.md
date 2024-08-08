@@ -22,7 +22,7 @@ python main.py
 * step-1: 使用线程池来实现目标检测的NPU多线程推理
 * step-2: 将推理结果传给deepsort类实现多目标跟踪
 目标检测所用模型为[官方](https://github.com/airockchip/rknn_model_zoo)提供onnx自己convert的，若修改为其他模型可能需要修改postprocess部分。
-deepsort模型为[大神](https://github.com/leafqycc/rknn-cpp-Multithreading)提供的pt自己转换的onnx、rknn，转换代码[参考]().
+deepsort模型为[大神](https://github.com/leafqycc/rknn-cpp-Multithreading)提供的pt自己转换的onnx、rknn，转换代码[参考](https://github.com/kuaileBenbi/RKNN-DeepSORT-REID-Convert).
 python版本的yolov8+deepsort参考了[yolov8](https://git.bwbot.org/publish/rknn3588-yolov8),
 [deepsort](https://github.com/ZQPei/deep_sort_pytorch)。
 c++版本的yolov5+deepsort参考了[yolov5](https://github.com/Zhou-sx/yolov5_Deepsort_rknn),
